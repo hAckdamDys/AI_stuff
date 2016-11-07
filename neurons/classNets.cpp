@@ -53,7 +53,7 @@ void Net::backProp(const vector<double> &targetVals){
 	//{
 	//to jest funkcja po prostu
 	for (unsigned n=0;n<outputLayer.size() - 1;++n){
-		//double delta = targetVals[n] - outputLayer[n].getOutputVal();
+		double delta = targetVals[n] - outputLayer[n].getOutputVal();
 		m_error +=delta * delta;
 	}
 	m_error /= outputLayer.size() - 1;//get average error squared
